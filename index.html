@@ -2051,27 +2051,6 @@ a.speaker-email:hover {
   display: block;
 }
 
-.carousel-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 6px 8px;
-  background: linear-gradient(180deg, rgba(26, 24, 48, 0) 0%, rgba(26, 24, 48, 0.82) 100%);
-  color: #fff;
-  font-family: var(--font-body);
-  font-size: 9.5px;
-  line-height: 1.25;
-  font-weight: 400;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-}
-
-.carousel-slide-real:hover .carousel-caption {
-  opacity: 1;
-}
-
 .carousel-slide.carousel-add {
   border-style: dashed;
   background: rgba(91, 63, 191, 0.06);
@@ -5404,7 +5383,6 @@ function selectCampus(name) {
         carouselSlidesHTML = gallery.map((g, gi) => `
               <div class="carousel-slide carousel-slide-real">
                 <img src="${g.src}" alt="${(lang === 'en' ? g.caption_en : g.caption_es) || ''}" loading="lazy">
-                ${(g.caption_en || g.caption_es) ? `<div class="carousel-caption">${lang === 'en' ? g.caption_en : g.caption_es}</div>` : ''}
               </div>`).join('');
       } else {
         carouselSlidesHTML = `
