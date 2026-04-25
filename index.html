@@ -2728,21 +2728,16 @@ a.attach-pdf:hover {
 
 .testimonial-card {
   padding: 22px 26px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(226, 90, 76, 0.08); /* coral tint — presenter */
   border-radius: 6px;
-  border-left: 3px solid rgba(255, 255, 255, 0.5);
+  border-left: 3px solid var(--coral);
   position: relative;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .testimonial-card:hover {
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(226, 90, 76, 0.14);
   transform: translateY(-3px);
-}
-
-.testimonial-placeholder {
-  border-left-style: dashed;
-  border-left-color: rgba(255, 255, 255, 0.25);
 }
 
 .testimonial-tag {
@@ -2751,20 +2746,21 @@ a.attach-pdf:hover {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--coral);
   margin-bottom: 12px;
 }
 
 .testimonial-tag-junior {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--mint);
 }
 
 .testimonial-card-junior {
-  border-left-color: rgba(255, 255, 255, 0.5);
+  background: rgba(79, 179, 138, 0.08); /* mint tint — attendee */
+  border-left-color: var(--mint);
 }
 
-.testimonial-card-junior.testimonial-placeholder {
-  border-left-color: rgba(255, 255, 255, 0.25);
+.testimonial-card-junior:hover {
+  background: rgba(79, 179, 138, 0.14);
 }
 
 .testimonial-quote {
@@ -4294,8 +4290,8 @@ footer em {
             <span class="lang-es">Presentador</span>
           </div>
           <p class="testimonial-quote">
-            <span class="lang-en">"The feedback was invaluable for improving my thesis."</span>
-            <span class="lang-es">"La retroalimentación fue invaluable para mejorar mi tesis."</span>
+            <span class="lang-en">"The feedback was invaluable for improving my paper."</span>
+            <span class="lang-es">"La retroalimentación fue invaluable para mejorar mi paper."</span>
           </p>
           <div class="testimonial-attribution">
             <span class="lang-en">— LEC · 8th sem</span>
@@ -5136,15 +5132,13 @@ const campusData = {
     ],
     cycles: [
       {
-        period_en: 'Feb–Jun 2026 · 6 sessions · in progress',
-        period_es: 'Feb–Jun 2026 · 6 sesiones · en curso',
+        period_en: 'Feb–Jun 2026 · 4 sessions · in progress',
+        period_es: 'Feb–Jun 2026 · 4 sesiones · en curso',
         sessions: [
           {date: '11-feb-2026', senior: [{title_en: 'Social Mobility and Health · Kickoff Session', title_es: 'Movilidad Social y Salud · Sesión de arranque', speakers: [{name: 'Mtro. Rodolfo de la Torre', aff: 'Director de Movilidad Social · Centro de Estudios Espinosa Yglesias (CEEY)'}], pdf_url: 'pdfs/sesiones/2026-02-11-01.pdf', pdf_filename: 'De_la_Torre_2026_Movilidad_social_y_salud.pdf'}], junior: [], gallery: [{src: 'imagenes/sesiones/2026-02-11-01.jpg', caption_en: 'JRS Kickoff Session flyer — February 11, 2026', caption_es: 'Flyer de la Sesión de Arranque del JRS — 11 de febrero, 2026'}, {src: 'imagenes/sesiones/2026-02-11-02.jpg', caption_en: 'Mtro. Rodolfo de la Torre presenting at Tec CCM', caption_es: 'Mtro. Rodolfo de la Torre presentando en Tec CCM'}, {src: 'imagenes/sesiones/2026-02-11-03.jpg', caption_en: 'Life expectancy gaps across Mexican regions — CEEY/ESRU-EMOVI 2017', caption_es: 'Brechas de esperanza de vida entre regiones de México — CEEY/ESRU-EMOVI 2017'}]},
           {date: '04-mar-2026', senior: [{title_en: 'Climate Policy and Economic Growth: Lessons from Applications in Latin America, Europe and Africa', title_es: 'Política Climática y Crecimiento Económico: Lecciones de Aplicaciones en Latinoamérica, Europa y África', speakers: [{name: 'Dr. Edmundo Molina Pérez', aff: 'Director de Investigación · Escuela de Gobierno y Transformación Pública · Tec de Monterrey'}, {name: 'Dra. Esperanza Plaza Ferreira', aff: 'Directora Académica · Escuela de Gobierno y Transformación Pública · Tec de Monterrey'}]}], junior: [{title_en: 'Urban Gentrification: Causes, Effects and How to Combat It', title_es: 'Gentrificación urbana: causas, efectos y cómo combatirla', speakers: [{name: 'Mijael André Hidalgo Ugalde', aff: 'LEC'}]}], gallery: [{src: 'imagenes/sesiones/2026-03-04-01.jpg', caption_en: 'JRS session flyer — March 4, 2026 · TEC CCM AI-303 · Multicampus', caption_es: 'Flyer de la sesión del JRS — 4 de marzo, 2026 · TEC CCM AI-303 · Multicampus'}, {src: 'imagenes/sesiones/2026-03-04-02.jpg', caption_en: 'Dr. Edmundo Molina Pérez presenting SISEPUEDE — climate policy decision-support tool for Latin America', caption_es: 'Dr. Edmundo Molina Pérez presentando SISEPUEDE — herramienta de análisis de política climática para Latinoamérica'}, {src: 'imagenes/sesiones/2026-03-04-03.jpg', caption_en: 'Mijael André Hidalgo Ugalde presenting "Urban Gentrification"', caption_es: 'Mijael André Hidalgo Ugalde presentando "Gentrificación urbana"'}, {src: 'imagenes/sesiones/2026-03-04-04.jpg', caption_en: 'Opening remarks — multicampus audience at Tec CCM', caption_es: 'Palabras de apertura — audiencia multicampus en Tec CCM'}, {src: 'imagenes/sesiones/2026-03-04-05.jpg', caption_en: 'Group photo — faculty, speakers and students after the session', caption_es: 'Foto grupal — profesorado, ponentes y estudiantes al finalizar la sesión'}]},
           {date: '25-mar-2026', senior: [{title_en: 'Primetime Satan: Fear-Based Media Exposure, Moral Panic, and Electoral Behavior', title_es: 'Primetime Satan: Fear-Based Media Exposure, Moral Panic, and Electoral Behavior', speakers: [{name: 'Dra. Fernanda Sobrino Macías', aff: 'Escuela de Gobierno y Transformación Pública · Tec de Monterrey'}]}], junior: [{title_en: 'The Balance of Flavor: A Study of the Use of Microeconomic Tools in SMEs', title_es: 'El balance del sabor: un estudio del uso de las herramientas microeconómicas en MIPYMES', speakers: [{name: 'Marianne Loyo Del Castillo', aff: 'LEC'}]}], gallery: [{src: 'imagenes/sesiones/2026-03-25-01.jpg', caption_en: 'JRS session flyer — March 25, 2026 · TEC CCM AI-303', caption_es: 'Flyer de la sesión del JRS — 25 de marzo, 2026 · TEC CCM AI-303'}, {src: 'imagenes/sesiones/2026-03-25-02.jpg', caption_en: 'Marianne Loyo Del Castillo presenting "La microeconomía para la toma de decisiones de PyMES"', caption_es: 'Marianne Loyo Del Castillo presentando "La microeconomía para la toma de decisiones de PyMES"'}, {src: 'imagenes/sesiones/2026-03-25-03.jpg', caption_en: 'Dra. Fernanda Sobrino — slide: The Media Shock, October 1988 (Satanic Panic and electoral behavior)', caption_es: 'Dra. Fernanda Sobrino — slide: The Media Shock, octubre 1988 (Pánico Satánico y comportamiento electoral)'}, {src: 'imagenes/sesiones/2026-03-25-04.jpg', caption_en: 'Dra. Fernanda Sobrino presenting the conclusion at Tec CCM', caption_es: 'Dra. Fernanda Sobrino presentando la conclusión en Tec CCM'}]},
-          {date: '22-abr-2026', senior: [{title_en: "Mexico's Labor Market through the Lens of the Beveridge Curve", title_es: "Mexico's Labor Market through the Lens of the Beveridge Curve", speakers: [{name: 'Mtro. Elam Rodríguez Alcaraz', aff: 'Economista · Banco de México'}]}], junior: [{title_en: 'Who cares for caregivers in Mexico?', title_es: '¿Quién cuida a las personas cuidadoras en México?', speakers: [{name: 'Vianey Gutiérrez Hernández', aff: 'LEC-LTP'}, {name: 'Rodrigo Alba Gómez', aff: 'LEC-LTP'}, {name: 'Mizael Gersaín Rangel Ponce', aff: 'LEC-LTP'}]}], gallery: [{src: 'imagenes/sesiones/2026-04-22-01.jpg', caption_en: 'JRS session flyer — April 22, 2026 · TEC CCM AI-303', caption_es: 'Flyer de la sesión del JRS — 22 de abril, 2026 · TEC CCM AI-303'}, {src: 'imagenes/sesiones/2026-04-22-02.jpg', caption_en: 'Junior team presenting "Who cares for caregivers in Mexico?"', caption_es: 'Equipo junior presentando "¿Quién cuida a las personas cuidadoras en México?"'}, {src: 'imagenes/sesiones/2026-04-22-03.jpg', caption_en: 'Multicampus session via Teams — CCM, CSF and CEM connected', caption_es: 'Sesión multicampus vía Teams — CCM, CSF y CEM conectados'}, {src: 'imagenes/sesiones/2026-04-22-04.jpg', caption_en: 'Audience at Tec CCM', caption_es: 'Audiencia en Tec CCM'}]},
-          {date: '13-may-2026', senior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: [{name: 'Dr. Carlos Enrique García Tejeda', aff: 'División de Estudios Jurídicos · CIDE'}]}], junior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: [{name: 'Dulce Estefanía Arciniega Bustos', aff: 'LEC'}]}]},
-          {date: '03-jun-2026', senior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: [{name: 'Mtro. Hermilo Cortés González', aff: 'Escuela de Gobierno y Transformación Pública · Tec de Monterrey'}]}], junior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: [{name: 'César Andrés Silva Farrera', aff: 'LRI-LTP'}]}]}
+          {date: '22-abr-2026', senior: [{title_en: "Mexico's Labor Market through the Lens of the Beveridge Curve", title_es: "Mexico's Labor Market through the Lens of the Beveridge Curve", speakers: [{name: 'Mtro. Elam Rodríguez Alcaraz', aff: 'Economista · Banco de México'}]}], junior: [{title_en: 'Who cares for caregivers in Mexico?', title_es: '¿Quién cuida a las personas cuidadoras en México?', speakers: [{name: 'Vianey Gutiérrez Hernández', aff: 'LEC-LTP'}, {name: 'Rodrigo Alba Gómez', aff: 'LEC-LTP'}, {name: 'Mizael Gersaín Rangel Ponce', aff: 'LEC-LTP'}]}], gallery: [{src: 'imagenes/sesiones/2026-04-22-01.jpg', caption_en: 'JRS session flyer — April 22, 2026 · TEC CCM AI-303', caption_es: 'Flyer de la sesión del JRS — 22 de abril, 2026 · TEC CCM AI-303'}, {src: 'imagenes/sesiones/2026-04-22-02.jpg', caption_en: 'Junior team presenting "Who cares for caregivers in Mexico?"', caption_es: 'Equipo junior presentando "¿Quién cuida a las personas cuidadoras en México?"'}, {src: 'imagenes/sesiones/2026-04-22-03.jpg', caption_en: 'Multicampus session via Teams — CCM, CSF and CEM connected', caption_es: 'Sesión multicampus vía Teams — CCM, CSF y CEM conectados'}, {src: 'imagenes/sesiones/2026-04-22-04.jpg', caption_en: 'Audience at Tec CCM', caption_es: 'Audiencia en Tec CCM'}]}
         ]
       },
       {
@@ -5225,23 +5219,19 @@ const campusData = {
     ],
     cycles: [
       {
-        period_en: 'Campus Estado de México · Feb–Jun 2026 · 4 sessions',
-        period_es: 'Campus Estado de México · Feb–Jun 2026 · 4 sesiones',
+        period_en: 'Campus Estado de México · Feb–Jun 2026 · 2 sessions',
+        period_es: 'Campus Estado de México · Feb–Jun 2026 · 2 sesiones',
         sessions: [
           {date: '18-feb-2026', senior: [{title_en: 'Analysis of the Election of Supreme Court Justices of Mexico through an Electoral Index', title_es: 'Análisis de la elección de Ministros de la Suprema Corte de Justicia de la Nación de México a través de un índice electoral', speakers: [{name: 'Dr. Rafael Martínez González', aff: 'Facultad de Ciencias Políticas y Sociales · UNAM'}]}], junior: [{title_en: 'The Creative Economy in Mexico', title_es: 'La economía creativa en México', speakers: [{name: 'Leonardo Daniel González Enríquez', aff: 'LEC'}, {name: 'Athenea Alexandra Aguirre Gómez', aff: 'LEC-LRI'}, {name: 'Bruno Chen', aff: 'LEC'}]}], gallery: [{src: 'imagenes/sesiones/2026-02-18-01.jpg', caption_en: 'JRS session flyer — February 18, 2026 · TEC CCM · Dr. Rafael Martínez González and junior team on creative economy', caption_es: 'Flyer de la sesión del JRS — 18 de febrero, 2026 · TEC CCM · Dr. Rafael Martínez González y equipo junior sobre economía creativa'}, {src: 'imagenes/sesiones/2026-02-18-02.jpg', caption_en: 'Dr. Rafael Martínez González (UNAM) presenting "Análisis de la elección de Ministros de la Suprema Corte" at Tec CCM', caption_es: 'Dr. Rafael Martínez González (UNAM) presentando "Análisis de la elección de Ministros de la Suprema Corte" en Tec CCM'}, {src: 'imagenes/sesiones/2026-02-18-03.jpg', caption_en: 'Junior team presenting "La economía creativa en México" at Tec CCM', caption_es: 'Equipo junior presentando "La economía creativa en México" en Tec CCM'}]},
-          {date: '08-abr-2026', senior: [{title_en: 'Do International Remittances Affect the Multidimensional Energy Poverty in Indigenous Mexican Households?', title_es: 'Do international remittances affect the multidimensional energy poverty in Indigenous Mexican households?', speakers: [{name: 'Dr. Genaro Cruz Salas', aff: 'University of Oxford'}]}], junior: [{title_en: 'SICA-Mexico Commercial Opportunities: Analysis of ICT Service Exports', title_es: 'Oportunidades comerciales SICA-México: Análisis de las exportaciones de servicios de tecnologías de la información y las comunicaciones (TIC)', speakers: [{name: 'Samara Ortigoza Mateos', aff: 'LEC-LRI'}, {name: 'Adriana Hernández Rivera', aff: 'LEC-LRI'}, {name: 'Jessica Rubí Olmos Pineda', aff: 'LEC'}]}], gallery: [{src: 'imagenes/sesiones/2026-04-08-01.jpg', caption_en: 'JRS session flyer — April 8, 2026 · TEC CCM · Dr. Genaro Cruz Salas (Oxford) and junior team on SICA-Mexico ICT exports', caption_es: 'Flyer de la sesión del JRS — 8 de abril, 2026 · TEC CCM · Dr. Genaro Cruz Salas (Oxford) y equipo junior sobre exportaciones TIC SICA-México'}, {src: 'imagenes/sesiones/2026-04-08-02.jpg', caption_en: 'Dr. Genaro Cruz Salas (University of Oxford) presenting on international remittances and multidimensional energy poverty in Indigenous Mexican households', caption_es: 'Dr. Genaro Cruz Salas (University of Oxford) presentando sobre remesas internacionales y pobreza energética multidimensional en hogares indígenas mexicanos'}, {src: 'imagenes/sesiones/2026-04-08-03.jpg', caption_en: 'Junior team presenting "Oportunidades comerciales SICA-México: Análisis de las exportaciones de servicios TIC" at Tec CCM', caption_es: 'Equipo junior presentando "Oportunidades comerciales SICA-México: Análisis de las exportaciones de servicios TIC" en Tec CCM'}]},
-          {date: '22-abr-2026', senior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: []}], junior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: []}]},
-          {date: '20-may-2026', senior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: [{name: 'Dr. José Antonio Cabrera Pereyra', aff: 'Profesor Investigador · Colegio Mexiquense'}]}], junior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: []}]}
+          {date: '08-abr-2026', senior: [{title_en: 'Do International Remittances Affect the Multidimensional Energy Poverty in Indigenous Mexican Households?', title_es: 'Do international remittances affect the multidimensional energy poverty in Indigenous Mexican households?', speakers: [{name: 'Dr. Genaro Cruz Salas', aff: 'University of Oxford'}]}], junior: [{title_en: 'SICA-Mexico Commercial Opportunities: Analysis of ICT Service Exports', title_es: 'Oportunidades comerciales SICA-México: Análisis de las exportaciones de servicios de tecnologías de la información y las comunicaciones (TIC)', speakers: [{name: 'Samara Ortigoza Mateos', aff: 'LEC-LRI'}, {name: 'Adriana Hernández Rivera', aff: 'LEC-LRI'}, {name: 'Jessica Rubí Olmos Pineda', aff: 'LEC'}]}], gallery: [{src: 'imagenes/sesiones/2026-04-08-01.jpg', caption_en: 'JRS session flyer — April 8, 2026 · TEC CCM · Dr. Genaro Cruz Salas (Oxford) and junior team on SICA-Mexico ICT exports', caption_es: 'Flyer de la sesión del JRS — 8 de abril, 2026 · TEC CCM · Dr. Genaro Cruz Salas (Oxford) y equipo junior sobre exportaciones TIC SICA-México'}, {src: 'imagenes/sesiones/2026-04-08-02.jpg', caption_en: 'Dr. Genaro Cruz Salas (University of Oxford) presenting on international remittances and multidimensional energy poverty in Indigenous Mexican households', caption_es: 'Dr. Genaro Cruz Salas (University of Oxford) presentando sobre remesas internacionales y pobreza energética multidimensional en hogares indígenas mexicanos'}, {src: 'imagenes/sesiones/2026-04-08-03.jpg', caption_en: 'Junior team presenting "Oportunidades comerciales SICA-México: Análisis de las exportaciones de servicios TIC" at Tec CCM', caption_es: 'Equipo junior presentando "Oportunidades comerciales SICA-México: Análisis de las exportaciones de servicios TIC" en Tec CCM'}]}
         ]
       }
 ,
       {
-        period_en: 'Campus Santa Fe · Feb–Jun 2026 · 3 sessions',
-        period_es: 'Campus Santa Fe · Feb–Jun 2026 · 3 sesiones',
+        period_en: 'Campus Santa Fe · Feb–Jun 2026 · 1 session',
+        period_es: 'Campus Santa Fe · Feb–Jun 2026 · 1 sesión',
         sessions: [
-          {date: '25-feb-2026', senior: [{title_en: 'Climate Risks: Economic Impacts and Their Effect on Global Financial Stability', title_es: 'Riesgos Climáticos: impactos económicos y su afectación en la estabilidad financiera global', speakers: [{name: 'Lic. Karla Macías', aff: 'Especialidad en Economía Ambiental y Ecológica'}]}], junior: [{title_en: 'Who Wins When the Government Buys?', title_es: '¿Quién gana cuando el gobierno compra?', speakers: [{name: 'María Paula Vargas', aff: 'LEC'}]}], gallery: [{src: 'imagenes/sesiones/2026-02-25-01.png', caption_en: 'JRS session flyer — February 25, 2026 · TEC CCM · Lic. Karla Macías and María Paula Vargas', caption_es: 'Flyer de la sesión del JRS — 25 de febrero, 2026 · TEC CCM · Lic. Karla Macías y María Paula Vargas'}, {src: 'imagenes/sesiones/2026-02-25-02.jpg', caption_en: 'Lic. Karla Macías presenting "Riesgos Climáticos: impactos económicos y su afectación en la estabilidad financiera global" at Tec CCM', caption_es: 'Lic. Karla Macías presentando "Riesgos Climáticos: impactos económicos y su afectación en la estabilidad financiera global" en Tec CCM'}, {src: 'imagenes/sesiones/2026-02-25-03.jpg', caption_en: 'María Paula Vargas presenting "¿Quién gana cuando el gobierno compra?" at Tec CCM', caption_es: 'María Paula Vargas presentando "¿Quién gana cuando el gobierno compra?" en Tec CCM'}]},
-          {date: '27-may-2026', senior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: [{name: 'Mtro. Aarón Bermejo Quintero', aff: 'London School of Economics (LSE)'}]}], junior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: []}]},
-          {date: '03-jun-2026', senior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: []}], junior: [{title_en: '[To be confirmed]', title_es: '[Por confirmar]', speakers: []}]}
+          {date: '25-feb-2026', senior: [{title_en: 'Climate Risks: Economic Impacts and Their Effect on Global Financial Stability', title_es: 'Riesgos Climáticos: impactos económicos y su afectación en la estabilidad financiera global', speakers: [{name: 'Lic. Karla Macías', aff: 'Especialidad en Economía Ambiental y Ecológica'}]}], junior: [{title_en: 'Who Wins When the Government Buys?', title_es: '¿Quién gana cuando el gobierno compra?', speakers: [{name: 'María Paula Vargas', aff: 'LEC'}]}], gallery: [{src: 'imagenes/sesiones/2026-02-25-01.png', caption_en: 'JRS session flyer — February 25, 2026 · TEC CCM · Lic. Karla Macías and María Paula Vargas', caption_es: 'Flyer de la sesión del JRS — 25 de febrero, 2026 · TEC CCM · Lic. Karla Macías y María Paula Vargas'}, {src: 'imagenes/sesiones/2026-02-25-02.jpg', caption_en: 'Lic. Karla Macías presenting "Riesgos Climáticos: impactos económicos y su afectación en la estabilidad financiera global" at Tec CCM', caption_es: 'Lic. Karla Macías presentando "Riesgos Climáticos: impactos económicos y su afectación en la estabilidad financiera global" en Tec CCM'}, {src: 'imagenes/sesiones/2026-02-25-03.jpg', caption_en: 'María Paula Vargas presenting "¿Quién gana cuando el gobierno compra?" at Tec CCM', caption_es: 'María Paula Vargas presentando "¿Quién gana cuando el gobierno compra?" en Tec CCM'}]}
         ]
       }
     ],
@@ -5673,7 +5663,7 @@ selectAxis('mentoring');
         extIdx++;
         tryNext();
       };
-      img.src = `logos/${id}.${exts[extIdx]}`;
+      img.src = `imagenes/logos/${id}.${exts[extIdx]}`;
     }
     tryNext();
   });
